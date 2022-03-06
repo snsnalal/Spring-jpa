@@ -1,0 +1,25 @@
+package japbook.jpashop;
+
+import org.springframework.stereotype.Repository;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+@Repository //엔티티 같은걸 찾아줌
+public class Test2 {
+
+    @PersistenceContext //엔티티 매니저를 주입해줌
+    private EntityManager em;
+
+    public Long save(test member)
+    {
+        em.persist(member);
+        return member.getId();
+    }
+    public test find(Long id)
+    {
+        return em.find(test.class, id);
+    }
+
+
+}

@@ -1,0 +1,20 @@
+package japbook.jpashop;
+
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+@Getter
+@Setter
+public class test {
+
+    @Id/*Id로 매핑*/@GeneratedValue//DB가 자동으로 생성되게 함
+    private Long id;
+    private String username;
+
+}
