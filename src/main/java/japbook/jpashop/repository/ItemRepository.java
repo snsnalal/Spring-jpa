@@ -21,7 +21,7 @@ public class ItemRepository {
         }
         else
         {
-            em.merge(item);//업데이트 비슷한 것
+            em.merge(item);//업데이트 비슷한 것, 실무에서 쓸 일 거의 없따.
         }
     }
 
